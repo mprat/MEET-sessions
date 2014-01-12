@@ -1621,11 +1621,11 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 .highlight .gr { color: #FF0000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .go { color: #888888 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
 .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
 .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
 .highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
@@ -1731,126 +1731,171 @@ text-align: inherit;
 <body>
 <div class="reveal">
 <div class="slides">
-<div style=display:none>
+<section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="user-interface-ui-user-experience-ux">User Interface (UI) / User Experience (UX)</h1>
+<ul>
+<li>What is the difference between UI and UX?
+<ul>
+<li>UI: the actual interface - colors, button placements, etc.</li>
+<li>UX: the total experience; how a user feels when they use the interface</li>
+</ul></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Content is still important</li>
+<li>For today we are going to assume you have good content and are just thinking of how to display it in a sensible way</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="principles-of-ui-ux">Principles of UI / UX</h2>
+<ol style="list-style-type: decimal">
+<li><strong>Learnability</strong> - is it easy to use?</li>
+<li><strong>Efficiency</strong> - once you learn it, is it fast to use?</li>
+<li><strong>Safety</strong> - are errors few and recoverable?</li>
+<li><strong>Aesthetics</strong> - satisfaction / happiness of user?</li>
+<li><strong>Ergonomics</strong> - is it comfortable / exhausting to use?</li>
+</ol>
+<p>Which ones you care about matter on the application. For example: missile launch, subway turnstile, experts, novices</p>
+</div><div style=display:none>
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="finding-and-designing-an-app-idea-for-the-individual-project">Finding and Designing an App Idea for the Individual Project</h1>
+<ul>
+<li>Missile launcher: safety</li>
+<li>Subway turnstile: efficiency</li>
+<li>Experts: efficiency</li>
+<li>Novices: learnability</li>
+</ul>
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="student-goals-for-individual-project">Student goals for individual project:</h2>
-<ol style="list-style-type: decimal">
-<li>Learn to think about mobile technology space</li>
-<li>Read tutorials to learn how to do something</li>
-<li>Practice technical and aesthetic design</li>
-<li>Do something with MIT AppInventor from start to finish</li>
-</ol>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="goal-for-the-next-hour-find-and-design-your-idea.">Goal for the next hour: find and design your idea.</h1>
-<ol style="list-style-type: decimal">
-<li>Idea</li>
-<li>Design</li>
-</ol>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="idea">1. Idea</h2>
-<h3 id="individual-project-prompts">Individual Project Prompts</h3>
-<ol style="list-style-type: decimal">
-<li>Make my morning better with an app. Here are some problems (you can think of others):
+<h2 id="design-process">Design process</h2>
 <ul>
-<li>I hit snooze too much</li>
-<li>Getting out of bed in the morning is hard</li>
-<li>I turn off my alarm and sleep through it</li>
+<li>What kinds of users do you have?
+<ul>
+<li>computer experience, age, motivation, goals, education, language, age?</li>
 </ul></li>
-<li>Make my diary / journal / Twitter / blog experience better
-<ul>
-<li>I want to write / blog / journal every day but have a hard time thinking of what to write</li>
-<li>I want to publish a status to Facebook and Twitter at the same time, every day, with a picture.</li>
-</ul></li>
-</ol>
-<p><strong>Take 5 minutes of continuous brainstorm / writing.</strong></p>
-<p><em>* Take 5 minutes of choosing one idea.</em>*</p>
+<li>What are your major goals?</li>
+<li>Useability spiral cycle: design -&gt; implement -&gt; test</li>
+<li>Parallel early prototypes will expose UI problems</li>
+</ul>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="project-design">2. Project design</h2>
+<p>Compare these three scroll bars:</p>
+<img src="imgs/scrollbars.png" width=400px>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="understanding-the-user">Understanding the user</h2>
+<ul>
+<li>Common mistake: describing what you WANT your users to be, rather than what they are</li>
+<li>YOU are not the user (most likely)</li>
+<li><strong>The user is always right in behavior</strong>. If they fail in doing something with your interface, the interface was not easy to use. They are not good at giving suggestions, but they are never wrong in their reactions.</li>
+<li>Important to do user testing</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="how-do-you-know-what-the-user-really-wants">How do you know what the user really wants?</h2>
+<ul>
+<li>Telephone handset weight</li>
+<li>A/B testing</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="simple-ui-guidelines-color">Simple UI guidelines: Color</h2>
 <ol style="list-style-type: decimal">
-<li>How it looks</li>
-<li>How it works</li>
+<li>Color is good, but think about color blindness, distinguishability, and experience.
+<ul>
+<li>If two colors are too different, your eye can't focus on it well. Do don't do something like red colors on blue background</li>
+</ul></li>
+<li>Blue is often confused with dark. Don't use blue on dark backgrounds where detail matters</li>
+<li>Color is specified on RGB scale most often
+<ul>
+<li>What is <strong>alpha</strong>?</li>
+<li>In HTML / CSS, also in HEX</li>
+<li>Show example</li>
+</ul></li>
+<li>Strongly saturated colors hurt the eyes. Softer colors are better.</li>
+<li>Background colors should contrast the foreground</li>
+<li>Use existing colors (red is STOP, green is GO)</li>
 </ol>
-<p><strong>My idea</strong>: create an alarm clock that has a snooze with a random number of minutes from 1-5.</p>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="how-it-looks">1. How it looks</h2>
-<p>(think templates)</p>
-<ul>
-<li>What things do you need on your screen?</li>
-<li>What buttons?</li>
-<li>What areas to put pictures / tables / text?</li>
-<li>How will your user know what to do?</li>
-</ul>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Take 5 minutes and come up with a bunch of designs.</p>
-</div>
-    </div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Take 5 minutes and choose one.</p>
-</div>
-    </div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<img src="imgs/app_sample_design.jpg" width=800> <figcaption> My idea: create an alarm clock that has a snooze with a random number of minutes from 1-5.</figcaption>
-</figure>
-
+<h2 id="simple-ui-guidelines-typography">Simple UI guidelines: Typography</h2>
+<ol style="list-style-type: decimal">
+<li><p>Readability is important: how fast can it be read, how easy is it to read?</p>
+<img src="imgs/fontspacing.png" width=800px></li>
+</ol>
+<p>Use a lot of leading!</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Font sizes in CSS</li>
+<li>Use whitespace around all text</li>
+<li>Make paragraphs narrow (~12-15 words)</li>
+<li>Serif (Georgia, Times New Roman) vs. sans-serif (Arial, Verdana). Use serif for paragraphs / long text and sans serif for display text / titles</li>
+<li>Don't use more than 2-3 typefaces</li>
+<li>Don't use more than one font from a typeface (i.e. one sans serif)</li>
+<li>Use weights and styles to establish contrasts</li>
+</ol>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="how-it-works">2. How it works</h2>
-<p>(think controller, model, code design)</p>
-<ul>
-<li>What parts connect to each other?</li>
-<li>What kinds of functions do you need?</li>
-<li>What pieces do you need to write?</li>
-</ul>
-<p>Exactly how you draw this is totally up to you. It's more like writing down all the pieces you need so you don't get confused.</p>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Take 5 minutes and come up with a tech picture outline.</p>
-</div>
-    </div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<img src="imgs/app_sample_tech.jpg" width=800> <figcaption> My idea: create an alarm clock that has a snooze with a random number of minutes from 1-5.</figcaption>
-</figure>
-
+<p>Pretend you are organizing a TEDx conference. You want to let anyone sign up to give a talk. In your groups, write down the following:</p>
+<ol style="list-style-type: decimal">
+<li>Who are your users? What are their characteristics?</li>
+<li>Draw three possible interfaces to accomplish this task.</li>
+</ol>
 </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="moving-forward">Moving forward</h2>
+<p>Pretend you are a company that is making a pizza-ordering app (you decide whether it is mobile or website). In your groups, write down the following:</p>
+<ol style="list-style-type: decimal">
+<li>Who are your users? What are their characteristics?</li>
+<li>Draw three possible interfaces to accomplish this task.</li>
+<li>We will practice testing our prototypes using both Wizard of Oz and paper prototype techniques.</li>
+</ol>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="prototype-quickly-prototype-often">Prototype quickly, prototype often</h2>
 <ul>
-<li>From your design diagram, find out what components you need in AppInventor</li>
-<li>For yourself (and you should tell me, I will ask you), answer the question <strong>What is my simple milestone?</strong></li>
-<li>If you need to, do more tutorials</li>
-<li>Look at documentation</li>
-<li>Go go go!</li>
+<li>paper prototypes</li>
+<li>&quot;Wizard of Oz&quot; prototypes</li>
+<li>computer prototypes (Twitter Bootstrap)</li>
+</ul>
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Design around user experience.</li>
+<li>&quot;know your space&quot; to figure out what buttons you need, the flow of the app, necessary components, eetc</li>
+<li>need good examples and bad examples</li>
+<li>talk about A/B testing</li>
+<li>look at Rob Miller's notes, but should mostly be a discussion of good / bad examples</li>
+<li>set useability metrics / goals (i.e. user should be able to complete a purchase in 30 seconds)</li>
 </ul>
 </div>
+    </div></section>
+    </section>
 </div>
 </div>
 
