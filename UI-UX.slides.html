@@ -1621,11 +1621,11 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 .highlight .gr { color: #FF0000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .go { color: #808080 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
 .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
 .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
 .highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
@@ -1734,6 +1734,12 @@ text-align: inherit;
 <section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Compare these three scroll bars:</p>
+<img src="imgs/scrollbars.png" width=400px>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="user-interface-ui-user-experience-ux">User Interface (UI) / User Experience (UX)</h1>
 <ul>
 <li>What is the difference between UI and UX?
@@ -1742,15 +1748,15 @@ text-align: inherit;
 <li>UX: the total experience; how a user feels when they use the interface</li>
 </ul></li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div><div class="fragment">
+    
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Content is still important</li>
 <li>For today we are going to assume you have good content and are just thinking of how to display it in a sensible way</li>
 </ul>
-</div></section>
+</div>
+    </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1777,6 +1783,76 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="learnability">Learnability</h3>
+<p>http://www.moma.org/interactives/exhibitions/2001/workspheres/</p>
+</div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>What is the metaphor that is used by the site?</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="efficiency">Efficiency</h3>
+<ul>
+<li>Don't make your user need to be too precise with the mouse. Make margins clickable, make important buttons big</li>
+<li>Keyboard shortcuts increase efficiency, but only if there is a way for users to learn them (ex: vim, emacs, Microsoft Word)</li>
+<li>Attention focus - a user can only focus on one area of the screen at a time. Don't make it even harder for them.</li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="uiux-techniques">UI/UX Techniques</h2>
+<ul>
+<li>Consistency (internal, external, metaphorical)</li>
+<li>Example: phone keyboard input, Swype keyboard input</li>
+</ul>
+<img src="imgs/swype.png" width=200px> <img src="imgs/droidx.jpg" width=200px>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Example: Gmail contacts and Gmail compose</li>
+</ul>
+<img src="imgs/gmail_contacts.png" width=200px> <img src="imgs/gmail_compose.png" width=200px>
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Metaphors, but they can be a curse too. What are some metaphors that we use in computers? [desktop, trashcan]. Rule of thumb about metaphors: use one if it works, but don't force it</li>
+</ul>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Example: RealCD CD player (who uses this?)</li>
+</ul>
+<img src="imgs/realCDinterface.jpg" width=400px>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>Direct mapping to something physical (segway)</p></li>
+<li><p>Consistency in wording. Don't use fancy words - use words that are accessible to all</p></li>
+<li><p>&quot;Affordance&quot; - help the user with visual queues about what the UI does. What are some examples of this? [Down arrow in Firefox bookmarks bar; button hover and change color]</p></li>
+<li><p>Give the user feedback for something you want them to do [button click; haptic feedback]. Something should change in 100ms or the user will notice</p></li>
+</ul>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="exercise">Exercise</h2>
+<p>Take a look at the Ubuntu operating system that we have been using at MEET all the time. Discuss it in terms of UI / UX. Suggest 3 improvements to the UI that makes the UX better.</p>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="design-process">Design process</h2>
 <ul>
 <li>What kinds of users do you have?
@@ -1787,12 +1863,6 @@ text-align: inherit;
 <li>Useability spiral cycle: design -&gt; implement -&gt; test</li>
 <li>Parallel early prototypes will expose UI problems</li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Compare these three scroll bars:</p>
-<img src="imgs/scrollbars.png" width=400px>
 </div></section>
     </section><section>
     <section>
@@ -1810,7 +1880,7 @@ text-align: inherit;
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="how-do-you-know-what-the-user-really-wants">How do you know what the user really wants?</h2>
 <ul>
-<li>Telephone handset weight</li>
+<li>Telephone handset weight example</li>
 <li>A/B testing</li>
 </ul>
 </div></section>
@@ -1838,13 +1908,14 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/fontspacing.png" width=800px>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="simple-ui-guidelines-typography">Simple UI guidelines: Typography</h2>
 <ol style="list-style-type: decimal">
-<li><p>Readability is important: how fast can it be read, how easy is it to read?</p>
-<img src="imgs/fontspacing.png" width=800px></li>
-</ol>
-<p>Use a lot of leading!</p>
-<ol start="2" style="list-style-type: decimal">
+<li>Readability is important: how fast can it be read, how easy is it to read? Use a lot of leading!</li>
 <li>Font sizes in CSS</li>
 <li>Use whitespace around all text</li>
 <li>Make paragraphs narrow (~12-15 words)</li>
@@ -1857,6 +1928,7 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="exercise">Exercise</h2>
 <p>Pretend you are organizing a TEDx conference. You want to let anyone sign up to give a talk. In your groups, write down the following:</p>
 <ol style="list-style-type: decimal">
 <li>Who are your users? What are their characteristics?</li>
@@ -1866,6 +1938,22 @@ text-align: inherit;
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="exercise">Exercise</h2>
+<p>In your groups, compare Amazon and Ebay.</p>
+<ol style="list-style-type: decimal">
+<li>Who are the customers? What are their characteristics?</li>
+<li>Which is it easier to buy a pair of socks on?</li>
+<li>Which is it easier to buy a box of pens on?</li>
+<li>Which is it easier to sell a radio on?</li>
+<li>Which is it easier to buy textbooks from?</li>
+<li>How long does it take you to actually buy something on each of the sites?</li>
+<li>Suggest two UI improvements to Amazon and two UI improvements to Ebay.</li>
+</ol>
+</div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="exercise">Exercise</h2>
 <p>Pretend you are a company that is making a pizza-ordering app (you decide whether it is mobile or website). In your groups, write down the following:</p>
 <ol style="list-style-type: decimal">
 <li>Who are your users? What are their characteristics?</li>
@@ -1895,6 +1983,16 @@ text-align: inherit;
 </ul>
 </div>
     </div></section>
+    </section><section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="general-ui-ux-techniques">General UI / UX techniques</h2>
+<ul>
+<li>Look at examples of good UI / UX</li>
+<li>Cool technique: check what a webpage is telling you nonverbally. Paste this chunk of Javascript into the console:</li>
+</ul>
+<pre><code>var result = document.evaluate(&quot;//text()&quot;, document.body, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);for (var i = 0; i &lt; result.snapshotLength; ++i) {var node = result.snapshotItem(i);if ((node.textContent+&quot;&quot;).match(/\w/)&amp;&amp;node.parentNode.nodeName != &quot;STYLE&quot;) {node.textContent = node.textContent.replace(/[A-­‐Z0-­‐9]/g, &quot;X&quot;).replace(/[a-­‐z]/g, &quot;x&quot;);}}void 0</code></pre>
+</div></section>
     </section>
 </div>
 </div>
