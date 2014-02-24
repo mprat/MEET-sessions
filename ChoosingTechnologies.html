@@ -1,30 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/reveal.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/theme/simple.css" id="theme">
-
-<!-- For syntax highlighting -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/css/zenburn.css">
-
-<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-<script>
-document.write( '<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-</script>
-
-<!--[if lt IE 9]>
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/html5shiv.js"></script>
-<![endif]-->
-
+<meta charset="UTF-8">
+<title>[]</title>
 <style type="text/css">
     .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}
@@ -1621,11 +1599,11 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 .highlight .gr { color: #FF0000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .go { color: #888888 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
 .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
 .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
 .highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
@@ -1673,94 +1651,73 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-.reveal {
-font-size: 20px;
-overflow-y: auto;
-overflow-x: hidden;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal pre {
-width: 95%;
-padding: 0.4em;
-margin: 0px;
-font-family: monospace, sans-serif;
-font-size: 80%;
-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+.input_area {
+  padding: 0.2em;
 }
-.reveal section img {
-border: 0px solid black;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal .slides {
-text-align: left;
-}
-.reveal.fade {
-opacity: 1;
-}
-div.input_area {
-padding: 0.06em;
-}
-div.code_cell {
-background-color: transparent;
-}
-div.prompt {
-width: 11ex;
-padding: 0.4em;
-margin: 0px;
-font-family: monospace, sans-serif;
-font-size: 80%;
-text-align: right;
-}
-div.output_area pre {
-font-family: monospace, sans-serif;
-font-size: 80%;
-}
-div.output_prompt {
-    /* 5px right shift to account for margin in parent container */
-    margin: 5px 5px 0 0;
-}
-.rendered_html p {
-text-align: inherit;
+
+pre {
+    padding: 0.2em;
+    border: none;
+    margin: 0px;
+    font-size: 13px;
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
+<script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
 </head>
-
 <body>
-<div class="reveal">
-<div class="slides">
-<section>
-    <section>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Each group presents one-liner. What did you do last week?</li>
+</ul>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="choosing-the-right-technologies">Choosing (the right) technologies</h1>
-</div><div style=display:none>
-    
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>You think you're ready to code? <em>NOT QUITE</em></p>
 <ul>
 <li>What will you use?</li>
 </ul>
 </div>
-    </div></section>
-    </section><section>
-    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="tools-not-language">TOOLS, not LANGUAGE</h2>
-</div><div style=display:none>
-    
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>Almost no one codes completely from scratch anymore - you always use existing tools / code / packages, so it is not so much the language that is important, but the tools that are important.</li>
 </ul>
 </div>
-    </div></section>
-    </section><section>
-    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="choosing-technology-considerations">Choosing technology considerations</h2>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>What are all of your product requirements?
@@ -1768,7 +1725,7 @@ text-align: inherit;
 <li><em>examples include speed, color, changeability</em></li>
 </ul></li>
 </ul>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>What is your key feature?
@@ -1776,7 +1733,7 @@ text-align: inherit;
 <li><em>based on your target customer segment and product goal</em></li>
 </ul></li>
 </ul>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>What are your project goals?
@@ -1786,7 +1743,7 @@ text-align: inherit;
 <li>MUST BE REALISTIC - you cause yourself pain if you are not honest</li>
 </ul></li>
 </ul>
-</div></section><section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>What do you know? How can you maintain it? What tools do you have access to?
@@ -1795,9 +1752,7 @@ text-align: inherit;
 <li>New startups / tools are less reliable but also more flexible</li>
 </ul></li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="choosing-technology-considerations">Choosing technology considerations</h2>
 <ul>
@@ -1806,25 +1761,18 @@ text-align: inherit;
 <li>What are your project goals?</li>
 <li>What do you know? How can you maintain it? What tools do you have access to?</li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="in-short-you-and-your-customers">In short: YOU and YOUR CUSTOMERS</h2>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="not-limiting-just-prioritizing">Not limiting, just prioritizing</h2>
 <p>Need to make a prioritized list of features / elements / plan for execution</p>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="case-study">Case study</h2>
 <img src="imgs/relayrides-logo.jpg" width=300>
-</div><div style=display:none>
-    
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>What they do is allow users to time-share their cars (decrease pollution, increase utilization of car space)</li>
@@ -1834,24 +1782,6 @@ text-align: inherit;
 <li>Who are their customers</li>
 </ul>
 </div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="case-study">Case study</h2>
-<img src="imgs/gettaxi.png" width=300>
-</div><div style=display:none>
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>App, not a website first</li>
-<li>iOS first</li>
-<li>website is mostly a splash page</li>
-</ul>
-</div>
-    </div></section>
-    </section><section>
-    <section>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="web-technologies-briefly">Web technologies, briefly</h2>
 <p>Considerations:</p>
@@ -1861,9 +1791,7 @@ text-align: inherit;
 <li>Use case (are people going to be using it on mobile?)</li>
 <li>Website or splash page?</li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="specific-technologies-to-build-websites">Specific technologies to build websites</h3>
 <ul>
@@ -1871,9 +1799,7 @@ text-align: inherit;
 <li>Nodejs (backend)</li>
 <li>Django (backend)</li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="mobile-apps-briefly">Mobile apps, briefly</h2>
 <p>Considerations:</p>
@@ -1881,9 +1807,7 @@ text-align: inherit;
 <li>Types of users (Android or iOS or other)</li>
 <li>Which first?</li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="specific-mobile-app-technologies">Specific mobile app technologies</h3>
 <ul>
@@ -1892,9 +1816,7 @@ text-align: inherit;
 <li>Phonegap (both at the same time)</li>
 <li>Smaller niche markets (Samsung OS, Blackberry)</li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="your-group-now">Your group, now</h2>
 <ul>
@@ -1903,96 +1825,13 @@ text-align: inherit;
 <li>Do you need a &quot;splash page&quot;.</li>
 <li>What technologies do you plan on using?</li>
 </ul>
-</div></section>
-    </section><section>
-    <section>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="prototyping-tool-web-based-cleaner">Prototyping tool (web-based, cleaner)</h2>
 <ul>
 <li>Need for A/B testing. Can split up work. Can export as PDF</li>
 <li>&quot;Pencil&quot; program.</li>
 </ul>
-</div></section>
-    </section>
 </div>
-</div>
-
-<!--
-Uncomment the following block and the addthis_widget.js (see below inside dependencies)
-to get enable social buttons.
--->
-
-<!--
-<div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:20px;top:20px;">
-<a class="addthis_button_twitter"></a>
-<a class="addthis_button_google_plusone_share"></a>
-<a class="addthis_button_linkedin"></a>
-<a class="addthis_button_facebook"></a>
-<a class="addthis_button_more"></a>
-</div>
--->
-
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/head.min.js"></script>
-
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/js/reveal.js"></script>
-
-<script>
-
-// Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-controls: true,
-progress: true,
-history: true,
-
-theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
-
-// Optional libraries used to extend on reveal.js
-dependencies: [
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/classList.js", condition: function() { return !document.body.classList; } },
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
-// { src: 'http://s7.addthis.com/js/300/addthis_widget.js', async: true},
-]
-});
-</script>
-
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-    },
-    displayAlign: 'left', // Change this to 'center' to center equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-    }
-});
-</script>
-<!-- End of mathjax configuration -->
-
-<script>
-//  We wait for the onload function to load MathJax after the page is completely loaded.
-//  MathJax is loaded 1 unit of time after the page is ready.
-//  This hack prevent problems when you load multiple js files (i.e. social button from addthis).
-//
-window.onload = function () {
-  setTimeout(function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  },1)
-}
-</script>
-
-<script>
-Reveal.addEventListener( 'slidechanged', function( event ) {
-MathJax.Hub.Rerender(event.currentSlide);
-});
-</script>
-
 </body>
-
 </html>
