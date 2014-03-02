@@ -1,30 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-<!-- General and theme style sheets -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/reveal.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/theme/simple.css" id="theme">
-
-<!-- For syntax highlighting -->
-<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/css/zenburn.css">
-
-<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-<script>
-document.write( '<link rel="stylesheet" href="//cdn.jsdelivr.net/reveal.js/2.4.0/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-</script>
-
-<!--[if lt IE 9]>
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/html5shiv.js"></script>
-<![endif]-->
-
+<meta charset="UTF-8">
+<title>[]</title>
 <style type="text/css">
     .clearfix{*zoom:1;}.clearfix:before,.clearfix:after{display:table;content:"";line-height:0;}
 .clearfix:after{clear:both;}
@@ -1673,263 +1651,217 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
-.reveal {
-font-size: 20px;
-overflow-y: auto;
-overflow-x: hidden;
+body {
+  overflow: visible;
+  padding: 8px;
 }
-.reveal pre {
-width: 95%;
-padding: 0.4em;
-margin: 0px;
-font-family: monospace, sans-serif;
-font-size: 80%;
-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+.input_area {
+  padding: 0.2em;
 }
-.reveal section img {
-border: 0px solid black;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-}
-.reveal .slides {
-text-align: left;
-}
-.reveal.fade {
-opacity: 1;
-}
-div.input_area {
-padding: 0.06em;
-}
-div.code_cell {
-background-color: transparent;
-}
-div.prompt {
-width: 11ex;
-padding: 0.4em;
-margin: 0px;
-font-family: monospace, sans-serif;
-font-size: 80%;
-text-align: right;
-}
-div.output_area pre {
-font-family: monospace, sans-serif;
-font-size: 80%;
-}
-div.output_prompt {
-    /* 5px right shift to account for margin in parent container */
-    margin: 5px 5px 0 0;
-}
-.rendered_html p {
-text-align: inherit;
+
+pre {
+    padding: 0.2em;
+    border: none;
+    margin: 0px;
+    font-size: 13px;
 }
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
 <link rel="stylesheet" href="custom.css">
 
-</head>
-
-<body>
-<div class="reveal">
-<div class="slides">
-<div style=display:none>
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="finding-and-designing-an-app-idea-for-the-individual-project">Finding and Designing an App Idea for the Individual Project</h1>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="student-goals-for-individual-project">Student goals for individual project:</h2>
-<ol style="list-style-type: decimal">
-<li>Learn to think about mobile technology space</li>
-<li>Read tutorials to learn how to do something</li>
-<li>Practice technical and aesthetic design</li>
-<li>Do something with MIT AppInventor from start to finish</li>
-</ol>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="goal-for-the-next-hour-find-and-design-your-idea.">Goal for the next hour: find and design your idea.</h1>
-<ol style="list-style-type: decimal">
-<li>Idea</li>
-<li>Design</li>
-</ol>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="idea">1. Idea</h2>
-<h3 id="individual-project-prompts">Individual Project Prompts</h3>
-<ol style="list-style-type: decimal">
-<li>Make my morning better with an app. Here are some problems (you can think of others):
-<ul>
-<li>I hit snooze too much</li>
-<li>Getting out of bed in the morning is hard</li>
-<li>I turn off my alarm and sleep through it</li>
-</ul></li>
-<li>Make my diary / journal / Twitter / blog experience better
-<ul>
-<li>I want to write / blog / journal every day but have a hard time thinking of what to write</li>
-<li>I want to publish a status to Facebook and Twitter at the same time, every day, with a picture.</li>
-</ul></li>
-</ol>
-<p><strong>Take 5 minutes of continuous brainstorm / writing.</strong></p>
-<p><em>* Take 5 minutes of choosing one idea.</em>*</p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="project-design">2. Project design</h2>
-<ol style="list-style-type: decimal">
-<li>How it looks</li>
-<li>How it works</li>
-</ol>
-<p><strong>My idea</strong>: create an alarm clock that has a snooze with a random number of minutes from 1-5.</p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="how-it-looks">1. How it looks</h2>
-<p>(think templates)</p>
-<ul>
-<li>What things do you need on your screen?</li>
-<li>What buttons?</li>
-<li>What areas to put pictures / tables / text?</li>
-<li>How will your user know what to do?</li>
-</ul>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Take 5 minutes and come up with a bunch of designs.</p>
-</div>
-    </div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Take 5 minutes and choose one.</p>
-</div>
-    </div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<img src="imgs/app_sample_design.jpg" width=800> <figcaption> My idea: create an alarm clock that has a snooze with a random number of minutes from 1-5.</figcaption>
-</figure>
-
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="how-it-works">2. How it works</h2>
-<p>(think controller, model, code design)</p>
-<ul>
-<li>What parts connect to each other?</li>
-<li>What kinds of functions do you need?</li>
-<li>What pieces do you need to write?</li>
-</ul>
-<p>Exactly how you draw this is totally up to you. It's more like writing down all the pieces you need so you don't get confused.</p>
-</div><div class="fragment">
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Take 5 minutes and come up with a tech picture outline.</p>
-</div>
-    </div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<figure>
-<img src="imgs/app_sample_tech.jpg" width=800> <figcaption> My idea: create an alarm clock that has a snooze with a random number of minutes from 1-5.</figcaption>
-</figure>
-
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="moving-forward">Moving forward</h2>
-<ul>
-<li>From your design diagram, find out what components you need in AppInventor</li>
-<li>For yourself (and you should tell me, I will ask you), answer the question <strong>What is my simple milestone?</strong></li>
-<li>If you need to, do more tutorials</li>
-<li>Look at documentation</li>
-<li>Go go go!</li>
-</ul>
-</div>
-</div>
-</div>
-
-<!--
-Uncomment the following block and the addthis_widget.js (see below inside dependencies)
-to get enable social buttons.
--->
-
-<!--
-<div class="addthis_toolbox addthis_floating_style addthis_32x32_style" style="left:20px;top:20px;">
-<a class="addthis_button_twitter"></a>
-<a class="addthis_button_google_plusone_share"></a>
-<a class="addthis_button_linkedin"></a>
-<a class="addthis_button_facebook"></a>
-<a class="addthis_button_more"></a>
-</div>
--->
-
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/head.min.js"></script>
-
-<script src="//cdn.jsdelivr.net/reveal.js/2.4.0/js/reveal.js"></script>
-
-<script>
-
-// Full list of configuration options available here: https://github.com/hakimel/reveal.js#configuration
-Reveal.initialize({
-controls: true,
-progress: true,
-history: true,
-
-theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
-
-// Optional libraries used to extend on reveal.js
-dependencies: [
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/lib/js/classList.js", condition: function() { return !document.body.classList; } },
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: "//cdn.jsdelivr.net/reveal.js/2.4.0/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
-// { src: 'http://s7.addthis.com/js/300/addthis_widget.js', async: true},
-]
-});
-</script>
-
-<!-- MathJax configuration -->
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
-    },
-    displayAlign: 'left', // Change this to 'center' to center equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
+<script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
     }
-});
-</script>
-<!-- End of mathjax configuration -->
-
-<script>
-//  We wait for the onload function to load MathJax after the page is completely loaded.
-//  MathJax is loaded 1 unit of time after the page is ready.
-//  This hack prevent problems when you load multiple js files (i.e. social button from addthis).
-//
-window.onload = function () {
-  setTimeout(function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS_HTML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  },1)
 }
+init_mathjax();
 </script>
+</head>
+<body>
 
-<script>
-Reveal.addEventListener( 'slidechanged', function( event ) {
-MathJax.Hub.Rerender(event.currentSlide);
-});
-</script>
-
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(intro to class) We are going to do something that is not usually done in entrepreneurship teaching, and that is merge CS and business for the customer exploration part of the project. The goal of today is not to find solutions to your area / field directly, but to get at your solution from the perspective of the customer / consumer and UI / UX.</p>
+<p>Clarification on the use of the word &quot;customer&quot; - what we mean is customer / stakeholder / user. The person who is being targeted with your solution. Customer is a business term, but we don't only mean customer in terms of business.</p>
+<p>(15 minutes for activity) Finalize your problem / customer segments. The goal is to figure out in general who your potential customers are - if there are multiple potential audiences, great. Just keep in mind that today we will be working very strongly on customers.</p>
+<p>Goal for the end of today: really truly understand your potential customer segments.</p>
+<p>(3 minutes per group) Share your areas / fields / arenas; major problems; potential customer segments (does not have to be very detailed).</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ui-vs.-ux">UI vs. UX</h2>
+<p>INTERFACE and EXPERIENCE</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>interface and the experience of a product / solution make or break the product</li>
+<li>sometimes the experience IS the product / solution</li>
+<li>Filled with examples, and I want to give you things to think about</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/gettaxi.png" width=350px>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>GetTaxi experience is different than the hailing a cab on the street experience</li>
+<li>This product is not about the interface, it is about the experience</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="understanding-the-user">Understanding the user</h2>
+<ul>
+<li>Common mistake: describing what you WANT your users to be, rather than what they are</li>
+<li><strong>The user is always right in behavior</strong>. If they fail in doing something with your interface, the interface was not easy to use. They are not good at giving suggestions, but they are never wrong in their reactions.</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>WHO</strong> is your user</p>
+<p><strong>WHEN</strong> is it used</p>
+<p><strong>WHERE</strong> is it used</p>
+<p><strong>WHAT</strong> features are a must / what is optional</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="principles-of-ui-ux">Principles of UI / UX</h2>
+<ol style="list-style-type: decimal">
+<li><strong>Learnability</strong> - is it easy to use?</li>
+<li><strong>Efficiency</strong> - once you learn it, is it fast to use?</li>
+<li><strong>Safety</strong> - are errors few and recoverable?</li>
+<li><strong>Aesthetics</strong> - satisfaction / happiness of user?</li>
+<li><strong>Ergonomics</strong> - is it comfortable / exhausting to use?</li>
+</ol>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>&quot;textbook&quot; UI / UX principles. There are more, but they can be broken into these 5 categories</li>
+<li>Which ones you care about matter on the application. For example: spaceshuttle launch, subway turnstile, experts, novices</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="techniques">Techniques</h2>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>These are by no means comprehensive techniques. This is more to serve examples, and there are a million ways to do something, and you can always invent your own. These are just to give you things to think about</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Metaphors (but don't force it)</li>
+<li>What people know is easy for them to understand</li>
+<li>Makes it easy to learn</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/realCDinterface.jpg" width=500px>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Consistency</li>
+<li>Stay close to what people know</li>
+<li>related to metaphors</li>
+<li>If you are doing something radical, your UI has to at least be something close to what people know</li>
+<li>The same applies for bootstrapping your ideas to something else. For example, if your idea is to make a game to play with others, maybe a Facebook game is easier for people to use than remembering to go to another new social networking website</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/swype.png" width=300px> <img src="imgs/droidx.jpg" width=300px>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>&quot;Affordance&quot;</li>
+<li>Give your users clues about what is happening (this is not related to the age or demographic of your users at all. this is just good for everyone)</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/firefox-downarrow.png" width=400px>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>User feedback. Something should change in 100ms, or the user will notice that nothing happened and get frustrated</li>
+<li>Angry users are not good users</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/pre-feedback.png" width=300px> <img src="imgs/android-user-feedback.png" width=300px>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Direct mapping to something physical or known</li>
+<li>related to metaphors, but more direct</li>
+<li>People who are used to using something in the physical world will want to use this more</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/segway.jpg" width=500px>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Gamification</li>
+<li>Make it fun</li>
+<li>especially important for younger users, or users who have a lot of things thrown at them</li>
+<li>Can help you stand out</li>
+<li>Can help with users coming back</li>
+<li>Competition is good too</li>
+<li>This can be a whole separate lecture, but basically make it fun</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/reddit.png" width=500px>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Look for your own examples of good UI / UX</li>
+<li>Don't mimic, take what is good and build on it</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/iphone5.jpg" width=500px>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="design-process">Design process</h2>
+<ul>
+<li>What kinds of users do you have?
+<ul>
+<li>computer experience, age, motivation, goals, education, language, age?</li>
+<li>YOU are not the user (in most cases)</li>
+</ul></li>
+<li>Prototype early, prototype often</li>
+<li>Paper prototypes</li>
+<li>A / B testing</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="how-do-you-know-what-the-user-really-wants">How do you know what the user really wants?</h2>
+<img src="imgs/old-telephone.jpg" width=500px>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Telephone handsets were heavy and users were asked &quot;what do you want the handset to weight&quot; but when the user testing was done, it turned out that they actually wanted different from what they said</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>WHO</strong> is your user</p>
+<p><strong>WHEN</strong> is it used</p>
+<p><strong>WHERE</strong> is it used</p>
+<p><strong>WHAT</strong> features are a must / what is optional</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>(break)</p>
+<p>(30 minutes) Identify customer COMPREHENSIVELY and create a CUSTOMER PROFILE. For each possible customer segment, make sure to answer the 4 questions above in as much detail as possible. But for the WHO especially. Old/young/internet literacy/language/income/education/car owner/pet owner/where do they go regularly/special characteristics. As you are doing this, think vaguely about what kinds of solutions are better for them: mobile, web, integration to a currently-existing product (e.g. FB game, car bumper sticker)</p>
+<p>(rest of time, depending on how much there is left) Now that you have a comprehensive customer profile, pretend that you are building a feature / app / website / whatever for them. Prototype this on paper, and role-play small features. Each group should have 2 paper prototype copies, and pair off half-groups with each other to test each other's product. Each tester group should be given a comprehensive customer profile, and understand the customer segment / problem / area. Give feedback pretending you are that customer segment. Testing team takes comprehensive notes on how the person uses their product / whatever. Later, will take this feedback and integrate it into their next-version prototype.</p>
+</div>
 </body>
-
 </html>

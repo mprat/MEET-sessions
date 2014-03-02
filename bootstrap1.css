@@ -1,0 +1,17 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.starter-template{
+	background-color: blue;
+	opacity: 0.5;
+}
+
+.lead{
+	/*color: red;*/
+	color: rgb(0, 255, 0);
+}
