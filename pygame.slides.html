@@ -1621,11 +1621,11 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 .highlight .gr { color: #FF0000 } /* Generic.Error */
 .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight .gi { color: #00A000 } /* Generic.Inserted */
-.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .go { color: #808080 } /* Generic.Output */
 .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
 .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
 .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
 .highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
@@ -1731,195 +1731,316 @@ text-align: inherit;
 <body>
 <div class="reveal">
 <div class="slides">
-<div style=display:none>
+<section>
+    <section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="pygame">Pygame</h1>
+</div><div class="fragment">
     
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Each group presents one-liner. What did you do last week?</li>
-</ul>
+<pre><code>import pygame</code></pre>
+<p>Pygame docs: <a href="https://www.pygame.org/docs/index.html">https://www.pygame.org/docs/index.html</a></p>
+</div>
+    </div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A Python <strong>module</strong> that is mostly used to make games, but is also a great way to make GUIs in Python. It relies on the ideas of object-oriented programming, classes, and objects.</p>
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="choosing-the-right-technologies">Choosing (the right) technologies</h1>
-</div><div style=display:none>
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>You think you're ready to code? <em>NOT QUITE</em></p>
-<ul>
-<li>What will you use?</li>
-</ul>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="tools-not-language">TOOLS, not LANGUAGE</h2>
-</div><div style=display:none>
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Almost no one codes completely from scratch anymore - you always use existing tools / code / packages, so it is not so much the language that is important, but the tools that are important.</li>
-</ul>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="choosing-technology-considerations">Choosing technology considerations</h2>
+<h2 id="a-few-concepts-we-need-before-using-pygame">A few concepts we need before using PyGame</h2>
 </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>What are all of your product requirements?
-<ul>
-<li><em>examples include speed, color, changeability</em></li>
-</ul></li>
-</ul>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>What is your key feature?
-<ul>
-<li><em>based on your target customer segment and product goal</em></li>
-</ul></li>
-</ul>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>What are your project goals?
-<ul>
-<li>Product elements: <em>vision, mission, problem to solve</em></li>
-<li>Team elements: <em>prototype, deploy, 6-month project, potential startup</em></li>
-<li>MUST BE REALISTIC - you cause yourself pain if you are not honest</li>
-</ul></li>
-</ul>
-</div></section><section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>What do you know? How can you maintain it? What tools do you have access to?
-<ul>
-<li>General rule of thumb: <em>good documentation, free tools</em></li>
-<li>New startups / tools are less reliable but also more flexible</li>
-</ul></li>
-</ul>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="choosing-technology-considerations">Choosing technology considerations</h2>
-<ul>
-<li>What are all of your product requirements?</li>
-<li>What is your key feature?</li>
-<li>What are your project goals?</li>
-<li>What do you know? How can you maintain it? What tools do you have access to?</li>
-</ul>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="where-do-features-come-from">Where do features come from?</h2>
-<ul>
-<li>Customer segments (what do your specific customers need)</li>
-<li>Your goals (what you think will achieve what you want to achieve)</li>
-</ul>
-</div><div style=display:none>
-    
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Example: If you want to make an unbiased news website, maybe a feature you want is to not allow names of political parties or politicans to show up on your website. Your customers are going to be people over the age of 65, so you must have very large text and very large buttons.</p>
-</div>
-    </div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="in-short-you-and-your-customers">In short: YOU and YOUR CUSTOMERS</h2>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="not-limiting-just-prioritizing">Not limiting, just prioritizing</h2>
-<p>Need to make a prioritized list of features / elements / plan for execution</p>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="case-study">Case study</h2>
-<img src="imgs/relayrides-logo.jpg" width=300>
+<h3 id="sizes-and-locations">Sizes and locations</h3>
 </div><div style=display:none>
     
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>What they do is allow users to time-share their cars (decrease pollution, increase utilization of car space)</li>
-<li>Website - very simple splash page. Most likely used Twitter Bootstrap</li>
-<li>iOS app released later. No Android app yet</li>
-<li>Need to keep database of users, cars, locations, etc.</li>
-<li>Who are their customers</li>
+<li>Everything is measured in pixels. A pixel is a dot on the screen.</li>
+<li>The entire screen is an x, y coordinate system with the TOP LEFT corner being 0, 0</li>
 </ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/screenorigintopleft.png" width=300px>
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="setting-up-the-screen">Setting up the screen</h3>
+</div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>main_screen = pygame.display.set_mode((400, 400))
+main_screen.fill((255,255,255))</code></pre>
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="rgb-color">RGB color</h3>
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Computer screen (rendered) color is described by three numbers - Red, Green, and Blue (RGB).</li>
+<li>Triplet (R, G, B) corresponds to the color, where each number is from 0 to 255.</li>
+<li>For example: (255, 0, 0) is red; (0, 255, 0) is green; (255, 255, 255) is white; (0, 0, 0) is black</li>
+</ul>
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="event-polling-game-loop">Event polling / game loop</h3>
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Instead of responding immediately when an event happens, hold a master &quot;list of events&quot; and based on what kind it is, respond to it.</li>
+<li>A &quot;game loop&quot; or an &quot;event loop&quot; is used to access events. Basically, it is an infinite loop that keeps going for the entire time the game is running, and only stops when you stop the game.</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>An example of a game loop:</p>
+<pre><code>while True: 
+    ev = pygame.event.poll()
+    if ev.type == pygame.QUIT: 
+        sys.exit()
+    if ev.type == pygame.MOUSEBUTTONDOWN: 
+        x, y = ev.pos
+        # do something with the click
+    pygame.display.flip()</code></pre>
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="rectangles">Rectangles</h3>
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Everything in pygame is organized by rectangles. You draw shapes and buttons into rectangles, you click on rectangles, you work with rectangles. A rectangle represents a space where you will draw something.</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The four numbers represent the (top left x coordinate, top left y coordinate, width, height)</p>
+<pre><code>button_rec = pygame.Rect(100, 200, 50, 20)</code></pre>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<img src="imgs/rectexample.png" width=270px>
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="surface">Surface</h3>
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>The type representing &quot;image on the screen.&quot; You can make it colorful or actually add an image to it.</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For an image:</p>
+<pre><code>buttonimg = pygame.image.load(&#39;baby-bamba.jpg&#39;)</code></pre>
+</div>
+    </div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>The default size will be the size of the image. There is no way to resize it - if you need to resize it, use a photo-editing program like Gimp.</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For a square of black color:</p>
+<pre><code>button_sq = pygame.Surface([20, 20])</code></pre>
+<p>For a square of another color:</p>
+<pre><code>button_sq = pygame.Surface([20, 20])
+button_sq.fill((255, 0, 0))</code></pre>
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="blit">Blit</h3>
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Think of it like &quot;drawing on the screen.&quot; What it actually means is &quot;change the pixel color inside a rectangle&quot;</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>button_rec = pygame.Rect(100, 100, 20, 20)
+button_sq = pygame.Surface([20, 20])
+main_screen.blit(button_sq, button_rec)</code></pre>
+</div>
+    </div></section><section>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="flip">Flip</h3>
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Redraw the entire window. Very costly, so you shouldn't do this very often.</li>
+</ul>
+</div>
+    </div><div class="fragment">
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<pre><code>pygame.display.flip()</code></pre>
+</div>
+    </div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A very basic example of a Pygame program is shown here:</p>
+</div>
+    </div></section>
+    </section><section>
+    <section>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pygame</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s">&quot;__main__&quot;</span><span class="p">:</span> 
+    <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+    <span class="n">main_screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+    <span class="n">main_screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
+    <span class="n">button_rec</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="n">button_sq</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Surface</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+    <span class="n">main_screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">button_sq</span><span class="p">,</span> <span class="n">button_rec</span><span class="p">)</span>
+    
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span> 
+        <span class="n">ev</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">ev</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span> 
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">ev</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">MOUSEBUTTONDOWN</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">ev</span><span class="o">.</span><span class="n">pos</span>
+            <span class="k">if</span> <span class="n">button_rec</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+                <span class="k">print</span> <span class="s">&quot;you clicked me!&quot;</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div><div style=display:none>
+    
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>And a commented version is here:</p>
+</div>
+    </div><div style=display:none>
+    
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">pygame</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c"># custom classes here</span>
+
+
+<span class="c"># functions not related to classes here</span>
+
+
+<span class="c"># main method</span>
+<span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s">&quot;__main__&quot;</span><span class="p">:</span> 
+    <span class="c"># start the pygame module</span>
+    <span class="n">pygame</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
+    
+    <span class="c"># the two numbers represent the X and Y window size (in pixels)</span>
+    <span class="n">main_screen</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">set_mode</span><span class="p">((</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
+    
+    <span class="c"># set the background color of the window - remember RGB</span>
+    <span class="n">main_screen</span><span class="o">.</span><span class="n">fill</span><span class="p">((</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">))</span>
+    
+    <span class="c"># make your rectangles and surfaces here</span>
+    <span class="n">button_rec</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Rect</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="n">button_sq</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">Surface</span><span class="p">([</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+    
+    <span class="c"># blit the button we created at the top here, because it will not change for the rest of the game</span>
+    <span class="c"># if it will change, blit it inside the game loop</span>
+    <span class="n">main_screen</span><span class="o">.</span><span class="n">blit</span><span class="p">(</span><span class="n">button_sq</span><span class="p">,</span> <span class="n">button_rec</span><span class="p">)</span>
+    
+    <span class="c"># game / event / main loop</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span> 
+        <span class="c"># get the last event that happened</span>
+        <span class="n">ev</span> <span class="o">=</span> <span class="n">pygame</span><span class="o">.</span><span class="n">event</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span>
+        
+        <span class="c"># if you clicked the X button to exit the window</span>
+        <span class="k">if</span> <span class="n">ev</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">QUIT</span><span class="p">:</span> 
+            
+            <span class="c"># close the window</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+        
+        <span class="c"># if you clicked down with the mouse</span>
+        <span class="k">if</span> <span class="n">ev</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="n">pygame</span><span class="o">.</span><span class="n">MOUSEBUTTONDOWN</span><span class="p">:</span>
+            <span class="c"># x, y represents the position of the click in the screen</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">ev</span><span class="o">.</span><span class="n">pos</span>
+            
+            <span class="c"># do something with the click</span>
+            
+            <span class="c"># check if the position of the click is inside the button</span>
+            <span class="k">if</span> <span class="n">button_rec</span><span class="o">.</span><span class="n">collidepoint</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+                <span class="k">print</span> <span class="s">&quot;you clicked me!&quot;</span>
+            
+        <span class="c"># every game loop, make sure you update the display, but only ONCE AT THE END!</span>
+        <span class="n">pygame</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
 </div>
     </div></section>
     </section><section>
     <section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="web-technologies-briefly">Web technologies, briefly</h2>
-<p>Considerations:</p>
-<ul>
-<li>Look (consistent, unique, etc. UI / UX / customers)</li>
-<li>Speed (do you need a database?)</li>
-<li>Use case (are people going to be using it on mobile?)</li>
-<li>Website or splash page?</li>
-</ul>
-</div></section>
-    </section><section>
-    <section>
+<h2 id="more-things">More things</h2>
+</div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="specific-technologies-to-build-websites">Specific technologies to build websites</h3>
-<ul>
-<li>Twitter Bootstrap (UI / UX) - you should use this no matter what</li>
-<li>Nodejs (backend)</li>
-<li>Django (backend)</li>
-</ul>
-</div></section>
-    </section><section>
-    <section>
+<h3 id="making-a-text-label">Making a text label</h3>
+</div><div class="fragment">
+    
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="mobile-apps-briefly">Mobile apps, briefly</h2>
-<p>Considerations:</p>
-<ul>
-<li>Types of users (Android or iOS or other)</li>
-<li>Which first?</li>
-</ul>
-</div></section>
-    </section><section>
-    <section>
+<pre><code>label_rec = pygame.Rect(50, 50, 200, 30)
+
+# first argument is a filename (none if you want the default)
+# second argument is the font size
+orderlabel = pygame.font.Font(None, 30)
+
+# Method: render(text, antialias, color, background=None)
+label = orderlabel.render(str(a), 1, (0, 0, 0), (255, 255, 255))
+
+main_screen.blit(label, label_rec)</code></pre>
+</div>
+    </div></section><section>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="specific-mobile-app-technologies">Specific mobile app technologies</h3>
-<ul>
-<li>Android</li>
-<li>iOS</li>
-<li>Phonegap (both at the same time)</li>
-<li>Smaller niche markets (Samsung OS, Blackberry)</li>
-</ul>
-</div></section>
-    </section><section>
-    <section>
+<h3 id="screens">Screens</h3>
+</div><div style=display:none>
+    
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="your-group-now">Your group, now</h2>
 <ul>
-<li>All of your features. What is your KEY feature. Ordered list of features.</li>
-<li>Customer analysis, web or mobile. Which flavor of mobile? Which flavor of web?</li>
-<li>Do you need a &quot;splash page&quot;.</li>
-<li>What technologies do you plan on using?</li>
-</ul>
-</div></section>
-    </section><section>
-    <section>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="prototyping-tool-web-based-cleaner">Prototyping tool (web-based, cleaner)</h2>
-<ul>
-<li>Need for A/B testing. Can split up work. Can export as PDF</li>
-<li>&quot;Pencil&quot; program.</li>
+<li>You can only have one window at a time in pygame, so everything you do will have to be on the same screen - no popup windows!</li>
 </ul>
 </div>
+    </div></section>
+    </section>
 </div>
 </div>
 
