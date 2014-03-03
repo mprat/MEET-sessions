@@ -1,3 +1,7 @@
 div.text_cell_render {
 	font-size: 150%;
 }
+
+.reveal{
+	overflow: visible;
+}
