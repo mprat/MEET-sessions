@@ -1,0 +1,612 @@
+
+
+
+% Header, overrides base
+
+    % Make sure that the sphinx doc style knows who it inherits from.
+    \def\sphinxdocclass{article}
+
+    % Declare the document class
+    \documentclass[letterpaper,10pt,english]{/usr/local/lib/python2.7/dist-packages/sphinx/texinputs/sphinxhowto}
+
+    % Imports
+    \usepackage[utf8]{inputenc}
+    \DeclareUnicodeCharacter{00A0}{\\nobreakspace}
+    \usepackage[T1]{fontenc}
+    \usepackage{babel}
+    \usepackage{times}
+    \usepackage{import}
+    \usepackage[Bjarne]{/usr/local/lib/python2.7/dist-packages/sphinx/texinputs/fncychap}
+    \usepackage{longtable}
+    \usepackage{/usr/local/lib/python2.7/dist-packages/sphinx/texinputs/sphinx}
+    \usepackage{multirow}
+
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{ucs}
+    \usepackage{enumerate}
+
+    % Used to make the Input/Output rules follow around the contents.
+    \usepackage{needspace}
+
+    % Pygments requirements
+    \usepackage{fancyvrb}
+    \usepackage{color}
+    % ansi colors additions
+    \definecolor{darkgreen}{rgb}{.12,.54,.11}
+    \definecolor{lightgray}{gray}{.95}
+    \definecolor{brown}{rgb}{0.54,0.27,0.07}
+    \definecolor{purple}{rgb}{0.5,0.0,0.5}
+    \definecolor{darkgray}{gray}{0.25}
+    \definecolor{lightred}{rgb}{1.0,0.39,0.28}
+    \definecolor{lightgreen}{rgb}{0.48,0.99,0.0}
+    \definecolor{lightblue}{rgb}{0.53,0.81,0.92}
+    \definecolor{lightpurple}{rgb}{0.87,0.63,0.87}
+    \definecolor{lightcyan}{rgb}{0.5,1.0,0.83}
+
+    % Needed to box output/input
+    \usepackage{tikz}
+        \usetikzlibrary{calc,arrows,shadows}
+    \usepackage[framemethod=tikz]{mdframed}
+
+    \usepackage{alltt}
+
+    % Used to load and display graphics
+    \usepackage{graphicx}
+    \graphicspath{ {figs/} }
+    \usepackage[Export]{adjustbox} % To resize
+
+    % used so that images for notebooks which have spaces in the name can still be included
+    \usepackage{grffile}
+
+
+    % For formatting output while also word wrapping.
+    \usepackage{listings}
+    \lstset{breaklines=true}
+    \lstset{basicstyle=\small\ttfamily}
+    \def\smaller{\fontsize{9.5pt}{9.5pt}\selectfont}
+
+    %Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    %Set pygments styles if needed...
+    
+        \definecolor{nbframe-border}{rgb}{0.867,0.867,0.867}
+        \definecolor{nbframe-bg}{rgb}{0.969,0.969,0.969}
+        \definecolor{nbframe-in-prompt}{rgb}{0.0,0.0,0.502}
+        \definecolor{nbframe-out-prompt}{rgb}{0.545,0.0,0.0}
+
+        \newenvironment{ColorVerbatim}
+        {\begin{mdframed}[%
+            roundcorner=1.0pt, %
+            backgroundcolor=nbframe-bg, %
+            userdefinedwidth=1\linewidth, %
+            leftmargin=0.1\linewidth, %
+            innerleftmargin=0pt, %
+            innerrightmargin=0pt, %
+            linecolor=nbframe-border, %
+            linewidth=1pt, %
+            usetwoside=false, %
+            everyline=true, %
+            innerlinewidth=3pt, %
+            innerlinecolor=nbframe-bg, %
+            middlelinewidth=1pt, %
+            middlelinecolor=nbframe-bg, %
+            outerlinewidth=0.5pt, %
+            outerlinecolor=nbframe-border, %
+            needspace=0pt
+        ]}
+        {\end{mdframed}}
+        
+        \newenvironment{InvisibleVerbatim}
+        {\begin{mdframed}[leftmargin=0.1\linewidth,innerleftmargin=3pt,innerrightmargin=3pt, userdefinedwidth=1\linewidth, linewidth=0pt, linecolor=white, usetwoside=false]}
+        {\end{mdframed}}
+
+        \renewenvironment{Verbatim}[1][\unskip]
+        {\begin{alltt}\smaller}
+        {\end{alltt}}
+    
+
+    % Help prevent overflowing lines due to urls and other hard-to-break 
+    % entities.  This doesn't catch everything...
+    \sloppy
+
+    % Document level variables
+    \title{ArduinoIntroTutorial}
+    \date{November 24, 2013}
+    \release{}
+    \author{Michele Pratusevich}
+    \renewcommand{\releasename}{}
+
+    % TODO: Add option for the user to specify a logo for his/her export.
+    \newcommand{\sphinxlogo}{}
+
+    % Make the index page of the document.
+    \makeindex
+
+    % Import sphinx document type specifics.
+     
+
+
+% Body
+
+    % Start of the document
+    \begin{document}
+
+        
+            \maketitle
+        
+
+        
+
+
+        
+        \section{MEET YL2 Individual Project: The Arduino Tutorial }
+
+\subsection{The plan for you, reader of this tutorial}
+
+Your instructions are to work through this tutorial. If you don't
+understand something, ask each other for help. Only come ask me if
+something is unclear and no one can figure it out. Of it you think you
+are doing something that is dangerous to you and / or others. The
+tutorial takes you through roughly these steps:
+
+\begin{enumerate}[1.]
+\item
+  \href{\#hardware}{Read about hardware, Arduinos}
+\item
+  \href{\#simpleprogram}{Play with the Arduino-program-language with
+  some simple programs}
+\item
+  \href{\#serial}{Play with serial connections to the computer}
+\item
+  \href{\#breadboards}{Learn how breadboards work}
+\item
+  \href{\#button}{Learn how to attach a button to an Arduino}
+\item
+  \href{\#indivproj}{Plan your individual project}
+\item
+  Work work work!
+\end{enumerate}\subsection{What is hardware? Why do we care? (What you CAN DO with
+hardware) \#\# (top)}
+
+\begin{itemize}
+\item
+  Interact with the physical world - react, make something move, etc.
+  \begin{itemize}
+  \item
+    User presses buttons, turns dials
+  \item
+    Sensors get information from environment
+  \item
+    Control motors
+  \end{itemize}
+\item
+  Run code on tiny computers that can stand alone (without a full
+  computer)
+\end{itemize}
+\subsection{What you WILL DO with hardware}
+
+\begin{itemize}
+\item
+  We won't control anything - for now we will focus on getting input,
+  either from the user or from the physical world.
+\item
+  To start with, you will work on getting input from the user through a
+  physical external button press. If there is time, you will use some
+  other sensor to get information from the user or the environment in a
+  different way.
+\end{itemize}\subsection{A bit about hardware in general}
+
+\emph{Hardware} is a broad term used to describe physical components
+outside of a computer. This includes electronics, circuits, and chips
+(the things that make the inside of a computer). Some facts, terms,
+information:
+
+\begin{itemize}
+\item
+  Hardware is serious business. It is sensitive physical pieces that
+  carry electricity to perform a certain task. Connecting wires the
+  wrong way, putting physical stress on the parts, or making the parts
+  dirty, wet, sticky, etc. is a danger to your physical safety. Please
+  respect the hardware, and make sure to take good care of it, both for
+  it's sake and for your sake.
+\item
+  \textbf{microcontroller} - a small computer, usually without a
+  display. Has limited code that it understands, and is often coded for
+  a specific purpose in the physical world away from a computer. It,
+  like any other computer, needs to get power from somewhere.
+\item
+  \textbf{microprocessor} - another word for a small computer, but one
+  that is more powerful than a microcontroller
+\item
+  Since you can't directly type code onto a microcontroller, you type
+  your code in a computer, then compile and upload it (``burn'' it) onto
+  the microcontroller. Usually you do this through a USB cable that
+  talks with the microcontroller using a language called \textbf{serial
+  communication}. If you tell the microcontroller to talk to the
+  computer, it will do so through the \textbf{serial console}.
+\item
+  Another name for the USB port is a \textbf{COM port}.
+\end{itemize}
+Some electronics concepts you will need to learn about hardware:
+
+\begin{itemize}
+\item
+  \textbf{Components} are pieces of electrical hardware, like resistors,
+  buttons, and wires
+\item
+  \textbf{Digital} vs. \textbf{analog} - When something is digital, it
+  has two values it can take, ON (1) or OFF (0). There is no such thing
+  as in-between. When something is analog, it can take any value between
+  ON (1) and OFF (0). Digital inputs and outputs are used for detecting
+  things like button presses and for counting numbers, while analog
+  inputs are used for detecting things like dial or slider position
+\item
+  \textbf{Sensors} are electrical components that measure something.
+  They can be temperature sensors, distance sensors, light sensors,
+  sound sensors, etc.
+\item
+  In the world of both digital and analog electronics in
+  microprocessors, the maximum (ON) voltage is usually 5 volts, and this
+  is referred to as \textbf{power}. The opposite, or OFF voltage, is 0
+  volts, and is referred to as \textbf{ground}, often abbreviated
+  \textbf{GND}.
+\item
+  A \textbf{breadboard} is a grid used putting together electrical
+  components. Like this:
+\end{itemize}\subsection{Arduino: the easiest way to get started }
+
+The best way to get started in getting comfortable with these tools is
+by using a microcontroller platform that is easy to use and has a lot of
+tutorials. This is the \href{http://arduino.cc}{Arduino} platform that
+we are going to use.
+
+You can see a few labeled parts on the board. Try to find them on your
+own boards.
+
+The cable that connects the Arduino to the computer is a USB cable that
+connects to a USB port (it is on the back of the laptop) and to the USB
+connector on the Arduino. This USB cable is also the cable that gives
+the Arduino electricity. Go ahead and do that now. You should see the
+red ``power'' light be on in the Arduino.\subsubsection{What is on the Arduino and what is on the computer}
+
+The workflow is like this: you write code on the computer in an editor,
+compile it on the computer, and send it to the Arduino (using the serial
+protocol) through the cable. As soon as this process is complete, the
+code executes immediately on the Arduino. The Arduino can then talk to
+the computer (if you tell it to) by printing things to the computer
+through the \textbf{serial console}. The way to ``restart'' a program
+running on the Arduino is to press the \textbf{reset button}.\subsection{How we work with Arduino and the Arduino IDE \#\# (top)}
+
+\begin{itemize}
+\item
+  Coding our Arduino programs on Ubuntu using the Arduino IDE
+  (\textbf{IDE} stands for integrated development environment, which
+  basically means a program that gives us a place to write our code)
+\item
+  Arduino uses a special language; it looks like C++, but it reads like
+  Python (and like English). The best way to learn the language is to
+  look at examples and play with the code yourself. So there will not be
+  an explanation of how the code works - you will learn by going through
+  the example code. After you finish coding your program, the way to
+  test it is to upload it to the Arduino and make sure it does what you
+  want it to do.
+\end{itemize}
+\subsubsection{Opening the Arduino IDE}
+
+It is already installed on the Ubuntu machines. To open it, open the
+program explorer and start typing ``Arduino'':
+
+It will open a program like this:
+
+The white space is where you will type your code, and the black is where
+the error messages will be shown.\subsubsection{Opening Arduino sample code from the IDE}
+
+One of the awesome things about working with Arduino is the wealth of
+resources available for Arduino. These include ``official Arduino sample
+code.'' To open the tutorials, go to ``File'' -\textgreater{}
+``Examples'', and then going to the category you want. Each tutorial
+will tell you which example code to open.\subsection{Tutorial 1: BLINK \#\# (top)}
+
+Open the ``Blink'' example code from the ``1. Basics'' example code
+menu. DO NOT attach a resistor and LED to the Arduino - the light on the
+Arduino board itself is connected to pin 13, so there is no need to risk
+blowing up our LEDs. Look through the code, with
+\href{http://arduino.cc/en/Tutorial/Blink}{this tutorial} as a guide.
+
+Upload the code to the Arduino using the upload button (the arrow in the
+white circle at the top of the IDE window):
+
+When you are done uploading, it should look like:
+
+If you have any orange text in the black box, something is wrong.
+
+If you have problems with your code not uploading (you'll see errors in
+the black error box at the bottom of the IDE), check out some
+\href{CommonArduinoProblems.ipynb}{common problems you might have}.
+
+Once you are done reading and understanding this code, do the following
+exercises:
+
+\begin{enumerate}[1.]
+\item
+  Change the light to be on for 2 seconds, off for 2 seconds
+\item
+  Change the light to be on for 3 seconds, off for 1 second
+\end{enumerate}
+You don't need to submit anything for these exercises, but you might
+want to save a copy of your modified programs in your Github folder.
+Answer for yourself the following question: What section of code happens
+once? What section of code continues to happen during execution?\subsection{Tutorial 2: Serial communication \#\# (top)}Now, let's play with how to send information from the Arduino to the
+computer's screen over serial. Make a new file and paste this code into
+it:\begin{verbatim}
+/*
+ * Hello World!
+ *
+ * This is the Hello World! for Arduino. 
+ * It shows how to send data to the computer
+ */
+
+
+void setup()                    // run once, when the sketch starts
+{
+  Serial.begin(9600);           // set up Serial library at 9600 bps
+
+  Serial.println("Hello world!");  // prints hello with ending line break 
+}
+
+void loop()                       // run over and over again
+{
+                                  // do nothing!
+}
+\end{verbatim}Notice that there is nothing in the \texttt{loop()} method, so
+everything that happens will happen only once. Upload the code to the
+Arduino. Nothing happens. This is because you need to open the Serial
+Monitor (the thing that watches what comes to the computer over the
+serial port) by going to ``Tools'' -\textgreater{} ``Serial Monitor''.
+You should get a window that pops up like this:
+
+To restart the program that has been burned into the Arduino, press and
+hold the RESET button on the Arduino (if you don't remember where it is,
+go back and look at the \href{\#parts}{parts} diagram). What do you
+expect to happen in the Serial Monitor? What actually happens?
+
+Once you've gotten the code to work (and understand the result), do the
+following exercises:
+
+\begin{enumerate}[1.]
+\item
+  Make the Arduino print ``Hello, World!'' over serial once every
+  second.
+\item
+  Make the Arduino print ``Hello, World!'' over serial once every
+  second, but only a total of five times.
+\end{enumerate}
+Save your code from exercise 2 in your Github repository.\subsection{How a breadboard works \#\# (top)}
+
+Remember breadboards?
+
+An interesting thing about breadboards is that the squares in each row
+are connected to each other. Horizontal rows are connected:
+
+And the two vertical rows on either side of the board are connected:
+
+For example, if I connect a wire from 5V on the Arduino to cell B2, then
+A2, C2, D2, and E2 are all automatically connected to 5V also.
+
+One common way to take advantage of this is to connect one cell in the
+right column to GROUND (0 volts), then being able to connect any
+components you need to ground by connecting a wire between the component
+and the ground column.
+
+For example, if you connect a wire from GND on the Arduino to the side
+column on the breadboard, like this:
+
+Then every other square in that column will be connected to GND
+automatically.\subsection{Tutorial 3: Buttons \#\# (top)}
+
+Next, open up the DigitalReadSerial, or the Button tutorial. Follow
+along with \href{http://arduino.cc/en/Tutorial/DigitalReadSerial}{this
+tutorial} to understand the code. Build the circuit, taking care to
+connect the appropriate components in the right way. Our buttons look
+like this:
+
+And the wires are super-easy to use and look like this:
+
+Test it to make sure the code works.
+
+When you are done, take a picture of your circuit and save it in your
+Github repository.\subsection{Your individual project \#\# (top)}
+
+Now that you have seen a few tutorials and hopefully have gotten a
+button to work on the Arduino, you need to choose a final project to
+work on.
+
+You must choose one of these projects to do as your individual project,
+but no two people can do the same project. Projects are written in
+approximate order of difficulty, easier projects at the top. If you come
+up with a variation of one of these projects, that is fine, just talk to
+me to get it approved. Two people can work on a variation of the same
+project.
+
+\begin{enumerate}[1.]
+\item
+  A simple switch - print the number 1 to the screen over and over
+  again, until the user presses a button. Then print the number 2 to the
+  screen. Every time the user presses the button, increase the number
+  displayed to the screen by one.
+\item
+  Keep-alive Light Button. Pretend that the Arduino button is a light
+  that is keepin ga baby chick alive. Keep the Arduino light turned on
+  when the button is pressed. Only turn the light off when the button is
+  no longer pressed.
+\item
+  Ask the user to press the button some number of times. After you don't
+  hear a button press for 2 seconds, use that number to set how fast the
+  LED blinks.
+\item
+  Make some kind of trivia game: ask the user a question randomly (from
+  a fixed list, not from the internet), and the user must press the
+  button the correct number of times to answer the question.
+\item
+  Every two seconds, ask the user for a button press 4 times. Keep track
+  of the button presses like this: 1011 (where 1 is a press and 0 is not
+  a press). At the end, convert this number from binary to decimal and
+  print it to the screen.
+\item
+  Ask the user to press and hold the button. However long the user
+  presses the button, set that to how fast the LED blinks.
+\item
+  A password detection application - when the user presses the button
+  the correct number of times for the correct length of time, the
+  password is correctly detected and the computer prints ``success!'' on
+  the screen
+\item
+  A Morse code encoding application - the user can record messages using
+  \href{http://en.wikipedia.org/wiki/Morse\_code}{Morse code}, which can
+  be printed back to the screen when the user is done
+\end{enumerate}Spend some time thinking (and deciding!) on which project you will work
+on. To see more information on the project description and requirements,
+look
+\href{https://docs.google.com/a/meet.mit.edu/document/d/1HzMu8S\_8xAyPVDZaA\_JOZEW5XLl72B5BL6Jtiv3Hze0/edit\#heading=h.kpxwsy50i6vt}{here}.
+
+If you want to see two more tutorials, here are two that come logically
+next. Otherwise, start working on your project! But first:
+
+\begin{enumerate}[1.]
+\item
+  Draw a diagram of any components you need (remember, PLAN, then DO)
+\item
+  Draw a diagram of any circuit you need for your project
+\end{enumerate}\subsection{Tutorial 4: Analog Input (potentiometer)}
+
+A \textbf{potentiometer} is an electrical component that is the
+equivalent of a dial or a knob, used to get analog input. Our
+potentiometers look like this:
+
+Follow \href{http://arduino.cc/en/Tutorial/AnalogReadSerial}{this}
+tutorial to learn how to use them.\subsection{Tutorial 5: Blink without delay}
+
+\href{http://arduino.cc/en/Tutorial/BlinkWithoutDelay}{This} tutorial,
+without actually hooking up the LED.\subsection{Setting up Arduino for yourself at home}
+
+Really easy on your own computer. Instructions
+\href{http://arduino.cc}{here}. If you want to take one home to work,
+talk to me first.\subsection{Resources}
+
+There are a zillion Arduino resources around - there is a lot to look
+through and it can be daunting. Here is a list of select resources that
+are worth your time, if you need to find anything:
+
+\begin{itemize}
+\item
+  \href{http://arduino.cc/en/Tutorial/HomePage}{The official Arduino
+  tutorials}
+\item
+  \href{http://hci.rwth-aachen.de/arduino}{Arduino in a Nutshell}
+\item
+  http://www.ladyada.net/learn/arduino/index.html
+\end{itemize}
+        
+
+        \renewcommand{\indexname}{Index}
+        \printindex
+
+    % End of document
+    \end{document}
+
+
